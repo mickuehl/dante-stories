@@ -52,12 +52,11 @@
       <% else %>
 
         <li class="new-post-button">
-          <%= link_to I18n.t("site.cta"), new_post_path, class: "button", data: { behavior: 'trigger-overlay' } %>
-          
+          <%= link_to I18n.t("site.cta"), new_post_path, class: "button" %>
         </li>
 
         <li class="sign-in-button">
-          <%= link_to I18n.t("site.sign"), new_user_session_path, class: 'button green-border-button', data: { behavior: 'trigger-overlay' } %>
+          <%= link_to I18n.t("site.sign"), new_user_session_path, class: 'button green-border-button' %>
         </li>
 
       <% end %>

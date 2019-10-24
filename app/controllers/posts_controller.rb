@@ -62,7 +62,11 @@ class PostsController < ApplicationController
   def uploads
     @post = current_user.posts.find(params[:id])
     a = @post.images.attach(params[:file])
-    render json: {url: url_for(a.last)}
+    if a 
+    render json: {url: url_for(@post.images.last) }
+    else
+    render json: {error: true}, status: 402
+    end
   end
 
   private

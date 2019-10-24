@@ -18,7 +18,7 @@
         <%= truncate(post.plain || "", length: 150, separator: ' ', escape: false) %>
         
       </div>
-      <%= link_to "Read more", post, class: 'read-more' %>
+      <%= link_to t("site.read_more"), post, class: 'read-more' %>
     <% end %>
   </div>
 

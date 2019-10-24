@@ -99,12 +99,12 @@ export default class NewEditor extends React.Component {
                                   } 
                                 }),
              PlaceholderBlockConfig(),
-             VideoRecorderBlockConfig({
+             /*VideoRecorderBlockConfig({
                 options: {
                   seconds_to_record: 20000,
                   upload_url: $('.editor-form').attr('action') + '/uploads',
                 }
-             })
+             })*/
            ]
   }
 
@@ -301,7 +301,7 @@ export default class NewEditor extends React.Component {
     var tag_string = $('[data-behavior="tags"]').data("tags");
     
     //if(tag_string){
-      var tags = tag_string.length > 0 ? tag_string.split(', ') : ['Story', 'Music'];
+      var tags = tag_string.length > 0 ? tag_string.split(', ') : ['Soluciones', 'Denuncias'];
 
       var my_taggle = new Taggle('js-taggle', {
         duplicateTagClass: 'bounce',
@@ -355,7 +355,9 @@ export default class NewEditor extends React.Component {
 
   render(){
 
-    return <Dante data_storage= {
+    return <Dante  
+                body_placeholder={"Escribe tu historia"}
+                data_storage= {
                     {
                       url: $('.editor-form').attr('action'),
                       save_handler: this.saveMethod

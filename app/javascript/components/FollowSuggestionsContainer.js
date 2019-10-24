@@ -44,7 +44,7 @@ export default class FollowSuggestionsContainer extends React.Component {
     return (
       <div className="follow-suggestions-container border-top">
         <div className="suggestions-header">
-          <h4 className="small-heading">People to follow</h4>
+          <h4 className="small-heading">{ this.props.people_to_follow }</h4>
           <a className="refresh-link float-right" onClick={this.refreshActiveUsers.bind(this)}>Refresh</a>
         </div>
         <div>

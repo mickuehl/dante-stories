@@ -53,6 +53,7 @@ export default class InlineEditor extends React.Component {
                 onClick={this.handleClick}
                 >
               <Dante content={this.initialContent()}
+              body_placeholder={"Escribe tu historia"}
                   data_storage= {
                       {
                         url: "/dummy",

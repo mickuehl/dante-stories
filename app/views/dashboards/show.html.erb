@@ -30,11 +30,11 @@
 
       <% if user_signed_in? %>
         <div class="flex-container border-top">
-          <h4 class="small-heading">Tags you follow</h4><%= react_component('AddTagButton') %>
+          <h4 class="small-heading"><%= I18n.t("site.follow_tags") %></h4><%= react_component('AddTagButton') %>
         </div>
         <%= react_component('FollowingTagList', { followingTags: current_user.following_tags }) %>
 
-        <%= react_component('FollowSuggestionsContainer') %>
+        <%= react_component('FollowSuggestionsContainer', title: I18n.t("site.people_to_follow") ) %>
       <% end %>
 
       <% unless @dashboard.filtered? %>
