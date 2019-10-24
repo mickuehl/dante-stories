@@ -9,7 +9,7 @@
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item">
         <% if user_signed_in? %>
-          <%= nav_link_to "Home", root_path %>
+          <%= nav_link_to I18n.t("site.home"), root_path %>
         <% else %>
           <%= nav_link_to I18n.t("site.picks"), root_path %>
         <% end %>
