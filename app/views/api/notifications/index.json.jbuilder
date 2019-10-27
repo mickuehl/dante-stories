@@ -6,6 +6,7 @@ json.notifications do |json|
     json.actor notification.actor.username
     json.actor_avatar_img_tag avatar_for(notification.actor, size: 40)
     json.action notification.action
+    json.action_translated I18n.t("site.actions.#{notification.action.gsub(' ', '-').underscore}")
 
     json.type notification.notifiable.class.to_s.underscore.humanize.downcase
 
@@ -14,7 +15,7 @@ json.notifications do |json|
             when "User" then user_path(notification.notifiable)
             when "Response" then post_path(notification.notifiable.post, anchor: "response_#{notification.notifiable.id}")
             end
-    json.time_ago time_ago_in_words(notification.created_at) + " ago"
+    json.time_ago distance_of_time_in_words_to_now(notification.created_at)
     json.unread notification.read_at.nil?
   end
 end

@@ -22,9 +22,9 @@
       <%= react_component("InlineEditor") %>
 
     </div>
-    <%= f.submit "Publish", class: 'button green-inner-button', onclick: "return changePath('#{post_responses_path(post)}', true)"  %>
+    <%= f.submit t("site.publish"), class: 'button green-inner-button', onclick: "return changePath('#{post_responses_path(post)}', true)"  %>
 
-    <%= f.submit "Go FullScreen", 
+    <%= f.submit t("site.go_full_screen"), 
     class: 'button green-inner-button' , onclick: "return changePath('#{post_response_build_path(post)}', false)"
       %>
 

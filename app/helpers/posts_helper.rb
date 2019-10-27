@@ -6,9 +6,9 @@ module PostsHelper
       min = body.split(" ").size / 250
     end
     if min == 0
-      'less than a minute read'
+      I18n.t('site.less_than_a_minute')
     else
-      "#{min} min read"
+      I18n.t('site.min_read', {min: min})
     end
   end
 

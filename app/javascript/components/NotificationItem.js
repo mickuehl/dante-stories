@@ -32,14 +32,14 @@ export default class NotificationItem extends React.Component {
   }
 
   notificationContent() {
-    const { actor, action, type } = this.props;
+    const { actor, action, action_translated, type } = this.props;
     switch (type) {
       case 'post':
-        return `${actor} ${action} ${type}`;
+        return `${actor} ${action_translated} ${type}`;
       case 'user':
-        return `${actor} ${action}`;
+        return `${actor} ${action_translated}`;
       case 'response':
-        return `${actor} ${action} ${type}`;
+        return `${actor} ${action_translated} ${type}`;
     }
   }
 

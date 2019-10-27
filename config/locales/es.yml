@@ -149,8 +149,24 @@ es:
   
   site:
     search: "buscar historias"
+    publish: "Publicar"
+    published: "Publicado"
+    edit: "Editar"
+    destroy: "Eliminar"
     cta: "Escribe una historia"
     sign: "Entrar/Registrarse"
+
+    notifications: "Notificaciones"
+    mark_all_as_read: "marcar todas como leidas"
+    liked_your_post: "%{name} le gustó tu publicación"
+
+    related_stories: historias relacionadas
+    responses: Respuestas
+
+    actions: 
+      also_commented_on_a: "comentó en "
+      liked_your: "le gustó"
+      started_following_you: comenzó a seguirte
 
     picks: "Destacadas"
     top: "Relevantes"
@@ -168,3 +184,13 @@ es:
     cancel: "Cancelar"
     read_more: "Leer mas"
     home: "Inicio"
+    tagged_in: Etiquetado en
+    people_interested_in: Personas interesadas en
+
+    less_than_a_minute: menos de un minuto de lectura
+    min_read: '%{min} de lectura'
+    
+    editor_dropdown:
+      title: ¿Listo para publicar tu historia?
+      subtitle: elige algunas etiquetas para poder buscar mejor tu historia
+

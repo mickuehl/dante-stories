@@ -33,10 +33,10 @@ export default class NotificationsContainer extends React.Component {
           <span className="dropdown-arrow-top"></span>
           <span className="dropdown-arrow-bottom"></span>
           <div className="notification-header">
-            <span>Notifications</span>
+            <span>{I18n.t("site.notifications")}</span>
             <a className="float-right mark-all-as-read"
               onClick={(e) => this.handleMarkAllAsRead(e)}>
-              Mark All as Read
+              {I18n.t("site.mark_all_as_read")}
             </a>
           </div>
           <ul
