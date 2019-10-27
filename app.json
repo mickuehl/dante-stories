@@ -1,0 +1,84 @@
+{
+  "addons": [
+    "bonsai",
+    "heroku-postgresql",
+    "heroku-redis",
+    "redistogo"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "env": {
+    "AWS_BUCKET": {
+      "required": true
+    },
+    "AWS_KEY": {
+      "required": true
+    },
+    "AWS_SECRET": {
+      "required": true
+    },
+    "BONSAI_URL": {
+      "required": true
+    },
+    "ELASTICSEARCH_URL": {
+      "required": true
+    },
+    "LANG": {
+      "required": true
+    },
+    "MAILER_ADDRESS": {
+      "required": true
+    },
+    "MAILER_DOMAIN": {
+      "required": true
+    },
+    "MAILER_PASS": {
+      "required": true
+    },
+    "MAILER_SENDER": {
+      "required": true
+    },
+    "MAILER_USER": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "REDIS_PROVIDER": {
+      "required": true
+    },
+    "REDIS_URL": {
+      "required": true
+    },
+    "REDISTOGO_URL": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "name": "dante-stories",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
