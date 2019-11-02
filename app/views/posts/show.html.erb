@@ -69,8 +69,8 @@
 
     <% if user_signed_in? && current_user?(@post.user) %>
       <div class="edit-delete-button-wrapper">
-        <%= link_to "Edit", edit_post_path(@post), class: 'button' %>
-        <%= link_to "Delete", post_path(@post), method: :delete, class: 'button' %>
+        <%= link_to t("site.edit"), edit_post_path(@post), class: 'button' %>
+        <%= link_to t("site.destroy"), post_path(@post), method: :delete, class: 'button' %>
       </div>
     <% end %>
   </div>
@@ -99,7 +99,7 @@
   <% end %>
 
   <div id="responses" class="col-10 col-md-6 offset-1 offset-md-3 main-content">
-    <h4 class="small-heading"><%= t("responses")%></h4>
+    <h4 class="small-heading"><%= t("site.responses")%></h4>
     <% if user_signed_in? %>
       <%= render partial: 'posts/response_editor', locals: { post: @post } %>
     <% end %>

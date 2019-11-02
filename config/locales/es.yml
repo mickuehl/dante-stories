@@ -156,6 +156,9 @@ es:
     cta: "Escribe una historia"
     sign: "Entrar/Registrarse"
 
+    feature: "Destacar"
+    unfeature: "No destacar"
+
     notifications: "Notificaciones"
     mark_all_as_read: "marcar todas como leidas"
     liked_your_post: "%{name} le gustó tu publicación"
